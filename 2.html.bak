@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		.nav {
+			width: 3000px;
+			margin: 0px auto;
+			background: blue;
+		}
+		.c {
+			display: inline-block;
+			width: 200px;
+			height: 150px;
+			transition: width 0.1s;
+		}
+		.c:nth-child(1) {
+			display: inline-block;
+		
+			z-index: 5;
+			background: url(images/8.jpg);
+		}
+		.c:nth-child(2) {
+			display: inline-block;
+			
+			left: 400px;
+			z-index: 4;
+			background: url(images/10.jpg);
+		}
+		.c:nth-child(3) {
+			display: inline-block;
+			
+			left: 610px;
+			z-index: 3;
+			background: url(images/8.jpg);
+		}
+		.c:nth-child(4) {
+			display: inline-block;
+			
+			left: 820px;
+			z-index: 2;
+			background: url(images/8.jpg);
+		}
+		.c:nth-child(5) {
+			display: inline-block;
+			
+			left: 1030px;
+			z-index: 1;
+			background: url(images/8.jpg);
+		}
+		.c:nth-child(6) {
+			display: inline-block;
+		
+			left: 1240px;
+			z-index: 0;
+			background: url(images/8.jpg);
+		}
+		.c:hover {
+			width: 500px;
+		}
+	
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<div class="c"></div>
+		<div class="c"></div>
+		<div class="c"></div>
+		<div class="c"></div>
+		<div class="c"></div>
+		<div class="c"></div>
+	</div>
+	<a class="meau">
+		3D
+	</a>
+	<div class="submeau">
+	</div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  /* 旋转方块*/
+	.nav {
+	width:510px;
+	height:300px;
+	perspective:1000px;
+	float:left;
+	}
+	.left {
+	width:200px;
+	height:300px;
+	display:inline-block;
+	}
+	.right {
+	width:300px;
+	height:250px;
+	display:inline-block;
+	transform-style:preserve-3d; /* 转化为3d效果 */
+	transform:rotateX(30deg); /* 改变X轴角度 */
+	position:relative;
+	transition: transform 3600s;
+	animation-name: mymove; /* 给动画定义一个名字 */
+
+	animation-duration: 3s; /* 动画持续时间 */
+	-webkit-animation-duration:3s;
+	animation-delay: 0s;/* 等待时间再开始动画 */
+	-webkit-animation-delay:0s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count:infinite;
+	animation-direction: alternate; /* 动画是否在下一周期逆向地播放。*/
+	-webkit-animation-direction:alternate;
+	/* animation-play-state:paused; 动画停止 */
+	} 
+
+@keyframes mymove
+{
+from {left:0px;}
+to {left:200px;}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+from {left:0px;}
+to {left:200px;}
+}
+	.left1:nth-child(1){
+		width:200px;
+		height:100px;
+		background:url(images/1.jpeg);
+	}
+	.left1:nth-child(2){
+		width:200px;
+		height:100px;
+		background:url(images/2.jpeg);
+	}
+	.left1:nth-child(3){
+		width:200px;
+		height:100px;
+		background:url(images/3.jpg);
+	}
+	.right1{
+		width:300px;
+		height:250px;
+		background:url(images/4.jpeg);
+		position:absolute;
+		transform:translateY(-125px) rotateX(90deg) ;
+	}
+	.right2{
+		width:300px;
+		height:250px;
+		background:url(images/5.jpeg);
+		position:absolute;
+		transform:translateZ(125px);
+	}
+	.right3{
+		width:300px;
+		height:250px;
+		background:url(images/6.jpg);
+		position:absolute;
+		transform:translateY(125px) rotateX(-90deg) ;
+	}
+	.right4 {
+		width:300px;
+		height:250px;
+		background:url(images/7.jpg);
+		position:absolute;
+		transform:translateZ(-125px)  rotateX(180deg);
+	}
+	.right:hover {
+	transform:rotateX(-888888deg);
+	}
+	h1{
+		color: white;
+		text-align: center;
+		margin-top: 100px;
+	}
+	/* 折叠菜单*/
+	.n {
+		position:relative;
+		margin:50px auto;	
+		width:200px;
+	perspective:1000px;
+	float:right;
+	}
+	.nav1 {
+		text-decoration:none;
+		display:block;
+		padding:10px 0px;
+		text-align:center;
+		background:#eee;
+	}
+	.n div 
+	{position:absolute; 
+	transform-style:preserve-3d;
+	top:100%; 
+	left:0; 
+	z-index:-1;
+	width:200px;
+	transform-origin: 0 0;
+}
+	.nav-one {
+	background:#ddd;
+	transform:rotateX(-100deg);
+	transition: 0.6s;
+	}
+	.nav-two {
+		background:#eee;
+	transform:rotateX(180deg);
+	transition: 1s;
+	}
+	.nav-three {
+		transform:rotateX(-180deg);
+		transition:transform 1s;
+		background:#ddd;
+	}
+	.n:hover .sub{
+		transform:rotateX(0deg);
+	}
+	/* 手风琴*/
+	.nav2 {
+			width: 3000px;
+			margin: 0px auto;
+			background: blue;
+		}
+		.c {
+			display: inline-block;
+			width: 200px;
+			height: 150px;
+			transition: width 0.1s;
+		}
+		.c:nth-child(1) {
+			display: inline-block;
+		
+			z-index: 5;
+			background: url(images/8.jpg);
+		}
+		.c:nth-child(2) {
+			display: inline-block;
+			
+			left: 400px;
+			z-index: 4;
+			background: url(images/10.jpg);
+		}
+		.c:nth-child(3) {
+			display: inline-block;
+			
+			left: 610px;
+			z-index: 3;
+			background: url(images/8.jpg);
+		}
+		.c:nth-child(4) {
+			display: inline-block;
+			
+			left: 820px;
+			z-index: 2;
+			background: url(images/8.jpg);
+		}
+		.c:nth-child(5) {
+			display: inline-block;
+			
+			left: 1030px;
+			z-index: 1;
+			background: url(images/8.jpg);
+		}
+		.c:nth-child(6) {
+			display: inline-block;
+		
+			left: 1240px;
+			z-index: 0;
+			background: url(images/8.jpg);
+		}
+		.c:hover {
+			width: 500px;
+		}
+		.clear {
+			clear:both;
+		}
+  </style>
+ </head>
+ <body>
+	<div class="nav">
+		<div class="left">
+			<div class="left1"></div>
+			<div class="left1"></div>
+			<div class="left1"></div>
+		</div>
+		<div class="right">
+			<a href="http:www.baidu.com"><div class="right1"><h1>百度一下</h1></div></a>
+			<a href="http:www.2144.com"><div class="right2"><h1>mdzz</h1></div></a>
+			<a href="http:www.4399.com"><div class="right3"><h1>抄袭汪</h1></div></a>
+			<a href="http:www.uc.com"><div class="right4"><h1>震惊</h1></div></a>		
+		</div>
+	</div>	
+		 <div class="n">
+	   <a href="" class="nav1">折叠栏目 
+	   </a>
+		 <div class="nav-one sub"><p>dasdasdasdsada</p><p>dasdasdasdsada</p><p>dasdasdasdsada</p>
+		 <div class="nav-two  sub" ><p>dasdasdasdsada</p><p>dasdasdasdsada</p><p>dasdasdasdsada</p>
+		 <div class="nav-three sub"><p>dasdasdasdsada</p><p>dasdasdasdsada</p><p>dasdasdasdsada</p>
+		 <div class="nav-two sub"><p>dasdasdasdsada</p><p>dasdasdasdsada</p><p>dasdasdasdsada</p>
+		 <div class="nav-three sub"><p>dasdasdasdsada</p><p>dasdasdasdsada</p><p>dasdasdasdsada</p></div></div></div></div></div>
+	   </div>
+	   <div class="nav2 clear">
+		<div class="c"></div>
+		<div class="c"></div>
+		<div class="c"></div>
+		<div class="c"></div>
+		<div class="c"></div>
+		<div class="c"></div>
+	</div>
+
+ </body>
+</html>

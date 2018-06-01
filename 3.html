@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	.n {
+		position:relative;
+		margin:50px auto;	
+		width:200px;
+	perspective:1000px;
+	
+	}
+	.nav {
+		text-decoration:none;
+		display:block;
+		padding:10px 0px;
+		text-align:center;
+		background:#eee;
+	}
+	.n div 
+	{position:absolute; 
+	transform-style:preserve-3d;
+	top:100%; 
+	left:0; 
+	z-index:-1;
+	width:200px;
+	transform-origin: 0 0;
+}
+	.nav-one {
+	background:#ddd;
+	transform:rotateX(-100deg);
+	transition: 0.6s;
+	}
+	.nav-two {
+		background:#eee;
+	transform:rotateX(180deg);
+	transition: 1s;
+	}
+	.nav-three {
+		transform:rotateX(-180deg);
+		transition:transform 1s;
+		background:#ddd;
+	}
+	
+	.n:hover .sub{
+		transform:rotateX(0deg);
+	}
+	
+	
+	
+  </style>
+ </head>
+ <body>
+	 <div class="n">
+	   <a href="" class="nav">折叠栏目 
+	   </a>
+		 <div class="nav-one sub"><p>dasdasdasdsada</p><p>dasdasdasdsada</p><p>dasdasdasdsada</p>
+		 <div class="nav-two  sub" ><p>dasdasdasdsada</p><p>dasdasdasdsada</p><p>dasdasdasdsada</p>
+		 <div class="nav-three sub"><p>dasdasdasdsada</p><p>dasdasdasdsada</p><p>dasdasdasdsada</p>
+		 <div class="nav-two sub"><p>dasdasdasdsada</p><p>dasdasdasdsada</p><p>dasdasdasdsada</p>
+		 <div class="nav-three sub"><p>dasdasdasdsada</p><p>dasdasdasdsada</p><p>dasdasdasdsada</p></div></div></div></div></div>
+	   </div>
+ </body>
+</html>
